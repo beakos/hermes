@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>hermes</title>
+</head>
+<body>
+    <nav class="container-fluid">
+        <ul>
+            <li><strong><a href="index.html">hermes</a></strong></li>
+        </ul>
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="donate.html" role="button">Donate</a></li>
+        </ul>
+    </nav>	
+    </nav>
+    <main class="container">
+        <div class="grid">
+            <section>
+                <hgroup>
+                    <h2>Search Results</h2>
+                    <h3>Find the Best Deals for Your Search</h3>
+                </hgroup>
+                <p>Showing results for: <strong id="searchQueryDisplay"></strong></p>
+                <div id="results-container" style="margin-top: 20px;">
+                    <!-- Search results will be dynamically loaded here -->
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="container">
+        <small><a href="privacy.html">Privacy Policy</a> • <a href="terms.html">Terms of Service</a></small>
+    </footer>
+	<script>
+		var urlParams = new URLSearchParams(window.location.search);
+		var searchQuery = urlParams.get('query');
+		document.getElementById('searchQueryDisplay').textContent = searchQuery;
+	</script>
+</body>
+</html>
